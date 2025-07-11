@@ -25,7 +25,7 @@ void load_model(simple_model & model, float * a, float * b, int rows_A, int cols
     {
         ctx_size += rows_A * cols_A * ggml_type_size(GGML_TYPE_F32); // tensor a
         ctx_size += rows_B * cols_B * ggml_type_size(GGML_TYPE_F32); // tensor b
-        ctx_size += 2 * ggml_tensor_overhead(), // tensors
+        ctx_size += 2 * ggml_tensor_overhead(); // tensors
         ctx_size += ggml_graph_overhead(); // compute graph
         ctx_size += 1024; // some overhead
     }
